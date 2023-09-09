@@ -1,0 +1,10 @@
+<template id = "garden-page">
+    <app-frame>
+        <h1 class="text-center">Garden</h1>
+    </app-frame>
+</template>
+<script>
+Vue.component("garden-page", {
+  template: "#garden-page",
+});
+</script>
