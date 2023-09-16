@@ -1,5 +1,11 @@
 <template id="bottom-nav-menu">
-  <v-bottom-navigation height="64" fixed grow class="bottom-nav elevation-0" :class="classes">
+  <v-bottom-navigation
+    height="64"
+    fixed
+    grow
+    class="bottom-nav elevation-0"
+    :class="classes"
+  >
     <slot></slot>
   </v-bottom-navigation>
 </template>
@@ -15,7 +21,6 @@ Vue.component("bottom-nav-menu", {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-/ This will have no effect for browsers that don't support the env() function (non ios) /
 .bottom-nav {
   bottom: calc(env(safe-area-inset-bottom)) !important;
 }
