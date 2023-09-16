@@ -6,6 +6,7 @@ import io.javalin.vue.VueComponent;
 public class HelloWorld {
     public static void main(String[] args) {
         var app = Javalin.create(javalinConfig -> {
+                    javalinConfig.staticFiles.add("/public");
                     javalinConfig.staticFiles.enableWebjars();
                 })
                 .get("/", ctx -> ctx.result("Hello World"))

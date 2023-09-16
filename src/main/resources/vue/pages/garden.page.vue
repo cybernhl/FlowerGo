@@ -1,8 +1,6 @@
 <template id="garden-page">
   <app-frame>
-    <v-row>
-      <h1 class="mx-auto">Garden</h1>
-    </v-row>
+    <h1 class="text-center mb-4">Garden</h1>
   </app-frame>
 </template>
 <script>
