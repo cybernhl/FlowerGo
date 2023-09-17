@@ -1,9 +1,9 @@
 <template id="quests-page">
   <app-frame>
-    <h1 class="text-center mb-4">Quests</h1>
-    <v-card>
-      <v-img src="/imgs/wildDandelion.jpg" height="130px"></v-img>
-      <v-card-title class="py-1">Collect 5 Dandelion seeds</v-card-title>
+    <page-heading>Quests</page-heading>
+    <v-card v-for="item in items" :key="item.id">
+      <v-img :src="item.imageUrl" alt="Image" height="100px"></v-img>
+      <v-card-title class="py-1">{{ item.title }}</v-card-title>
       <v-card-actions>
         <v-spacer></v-spacer>
         <v-btn @click="show = !show">
@@ -15,13 +15,7 @@
       <v-expand-transition>
         <div v-show="show">
           <v-divider></v-divider>
-          <v-card-text>
-            I'm a thing. But, like most politicians, he promised more than he
-            could deliver. You won't have time for sleeping, soldier, not with
-            all the bed making you'll be doing. Then we'll go with that data
-            file! Hey, you add a one and two zeros to that or we walk! You're
-            going to do his laundry? I've got to find a way to escape.
-          </v-card-text>
+          <v-card-text>{{ item.description }} </v-card-text>
         </div>
       </v-expand-transition>
     </v-card>
@@ -30,6 +24,20 @@
 <script>
 Vue.component("quests-page", {
   data: () => ({
+    items: [
+      {
+        id: 1,
+        title: "Collect 5 Dandelion seeds",
+        description: "Description for card 1",
+        imageUrl: "/imgs/wild-dandelion.jpg",
+      },
+      {
+        id: 2,
+        title: "Water your plant 3 times",
+        description: "Description for card 2",
+        imageUrl: "/imgs/watering-flowers.jpg",
+      },
+    ],
     show: false,
   }),
   template: "#quests-page",
