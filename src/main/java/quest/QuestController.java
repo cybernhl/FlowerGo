@@ -10,8 +10,9 @@ public class QuestController {
         this.questService = questService;
     }
 
-    public void getAllQuests(Context ctx) {
+    public void getAllQuests(Context ctx) throws InterruptedException {
         List<Quest> quests = questService.getAll();
+        Thread.sleep(1000);
         ctx.json(quests);
     }
 }

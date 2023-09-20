@@ -1,28 +1,20 @@
 <template id="quests-page">
   <app-frame>
     <page-heading>Quests</page-heading>
-    <template v-for="item in items">
-      <quest-card :quest="item"></quest-card>
+    <v-progress-circular
+      v-if="quests.loading"
+      indeterminate
+      color="primary"
+    ></v-progress-circular>
+    <template v-for="quest in quests.data">
+      <quest-card :quest="quest"></quest-card>
     </template>
   </app-frame>
 </template>
 <script>
 Vue.component("quests-page", {
   data: () => ({
-    items: [
-      {
-        id: 1,
-        title: "Collect 5 Dandelion seeds",
-        description: "Description for card 1",
-        imageUrl: "/imgs/wild-dandelion.jpg",
-      },
-      {
-        id: 2,
-        title: "Water your plant 3 times",
-        description: "Description for card 2",
-        imageUrl: "/imgs/watering-flowers.jpg",
-      },
-    ],
+    quests: new LoadableData("/api/quests", false),
   }),
   template: "#quests-page",
 });
