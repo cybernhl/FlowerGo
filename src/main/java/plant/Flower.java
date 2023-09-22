@@ -1,5 +1,13 @@
 package plant;
 
-public record Flower(String name, String type, int growthLevel, int waterLevel, int sunshineLevel, int fertilizerLevel) {
+import java.time.Instant;
 
-}
+public record Flower(
+        String name,
+        String type,
+        Color color,
+        GrowthLevel growthLevel,
+        WaterLevel waterLevel,
+        SunshineLevel sunshineLevel,
+        Instant lastFertilized
+) { }
