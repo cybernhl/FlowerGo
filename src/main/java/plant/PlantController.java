@@ -1,5 +1,6 @@
 package plant;
 
+import io.javalin.http.Context;
 import java.util.List;
 
 public class PlantController {
@@ -8,10 +9,13 @@ public class PlantController {
     public PlantController(PlantService plantService) {
         this.plantService = plantService;
     }
-    public void plantFlowers(String name, String type, int growth, int waterLevel, int sunshineLevel, int fertilizerLevel){
-        plantService.plantFlowers(name, type, growth, waterLevel, sunshineLevel, fertilizerLevel);
+
+    public void plantFlowers(Context ctx) {
+        Flower flower = ctx.bodyAsClass(Flower.class);
+        plantService.plantFlowers(flower);
     }
-    public List<Flower> getGarden(){
+
+    public List<Flower> getGarden() {
         return plantService.getGarden();
     }
 }
