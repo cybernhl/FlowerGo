@@ -8,8 +8,8 @@ public class PlantService {
     public PlantService(){
         garden = new ArrayList<>();
     }
-    public void plantFlowers(String name, String type,  int growthLevel, int waterLevel, int sunshineLevel){
-        Flower flower = new Flower(name, type, growthLevel, waterLevel, sunshineLevel);
+    public void plantFlowers(String name, String type, int growthLevel, int waterLevel, int sunshineLevel, int fertilizerLevel){
+        Flower flower = new Flower(name, type, growthLevel, waterLevel, sunshineLevel, fertilizerLevel);
         garden.add(flower);
     }
     public List<Flower> getGarden(){
