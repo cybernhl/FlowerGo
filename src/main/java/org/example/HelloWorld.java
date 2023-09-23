@@ -3,15 +3,17 @@ package org.example;
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
 import io.javalin.vue.VueComponent;
+import plant.PlantController;
+import plant.PlantService;
 import quest.QuestController;
 import quest.QuestService;
 
-import static io.javalin.apibuilder.ApiBuilder.get;
-import static io.javalin.apibuilder.ApiBuilder.path;
+import static io.javalin.apibuilder.ApiBuilder.*;
 
 public class HelloWorld {
     public static void main(String[] args) {
         var questController = new QuestController(new QuestService());
+        var plantController = new PlantController(new PlantService());
         var app = Javalin.create(javalinConfig -> {
             javalinConfig.staticFiles.add("src/main/resources/public", Location.EXTERNAL);
             javalinConfig.staticFiles.enableWebjars();
@@ -22,6 +24,7 @@ public class HelloWorld {
             get("/garden", new VueComponent("garden-page"));
             path("/api", () -> {
                 get("/quests", questController::getAllQuests);
+                post("/plant", plantController::plantFlowers);
             });
         }).start(7070);
     }

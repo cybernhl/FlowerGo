@@ -16,4 +16,4 @@ public enum WaterLevel {
     public int getLevel() {
         return level;
     }
-    }
+}

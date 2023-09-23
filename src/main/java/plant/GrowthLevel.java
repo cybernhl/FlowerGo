@@ -6,7 +6,7 @@ public enum GrowthLevel {
     BUD(3), // Represents the bud stage
     FLOWER(4), // Represents the flowering stage
     FULL_BLOOM(5), // Represents full bloom stage
-    SEEDS(6); // Represents the stage of having seeds
+    HARVEST_READY(6); // Represents the stage of harvesting
 
     private final int level;
 
