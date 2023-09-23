@@ -25,6 +25,7 @@ public class HelloWorld {
             path("/api", () -> {
                 get("/quests", questController::getAllQuests);
                 post("/plant", plantController::plantFlowers);
+                get("/flowers", plantController::getGarden);
             });
         }).start(7070);
     }

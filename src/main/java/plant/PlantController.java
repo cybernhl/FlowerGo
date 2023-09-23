@@ -15,7 +15,8 @@ public class PlantController {
         plantService.plantFlowers(flower);
     }
 
-    public List<Flower> getGarden() {
-        return plantService.getGarden();
+    public void getGarden(Context ctx) {
+        ctx.json(plantService.getGarden());
+        //send the flower from the server to the client in jsonString
     }
 }
