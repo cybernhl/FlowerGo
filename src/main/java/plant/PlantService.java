@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlantService {
-    private final List<Flower> garden = List.of(
+    private final List<Flower> garden = new ArrayList<>(List.of(
             new Flower(
                     "Steve",
                     "SunFlower",
@@ -14,7 +14,7 @@ public class PlantService {
                     WaterLevel.SLIGHTLY_MOIST,
                     SunshineLevel.NONE,
                     Instant.now()
-            )
+            ))
     );
 
     public void plantFlowers(Flower flower) {
