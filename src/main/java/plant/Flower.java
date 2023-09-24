@@ -3,8 +3,7 @@ package plant;
 import java.time.Instant;
 
 public record Flower(
-        String name,
-        String type,
+        FlowerType flowerType,
         Color color,
         GrowthLevel growthLevel,
         WaterLevel waterLevel,
