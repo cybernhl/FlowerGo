@@ -7,8 +7,7 @@ import java.util.List;
 public class PlantService {
     private final List<Flower> garden = new ArrayList<>(List.of(
             new Flower(
-                    "Steve",
-                    "SunFlower",
+                    FlowerType.SUNFLOWER,
                     Color.YELLOW,
                     GrowthLevel.BUD,
                     WaterLevel.SLIGHTLY_MOIST,
