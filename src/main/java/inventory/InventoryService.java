@@ -2,23 +2,24 @@ package inventory;
 
 import plant.*;
 
-import java.time.Instant;
-import java.util.ArrayList;
 import java.util.List;
 
 public class InventoryService {
-    List<Flower> flower = new ArrayList<>(
-    );
-    List<Fertilizer> fertilizer = new ArrayList<>(
-    );
-    List<Seed> seed = new ArrayList<>(
-    );
-    private final Inventory inventory = new Inventory(
-            seed,
-            fertilizer
+
+    private Inventory inventory = new Inventory(
+            List.of(
+                    new Seed(FlowerType.ASTER)
+            ),
+            List.of(
+                    new Fertilizer(FertilizerType.ORGANIC)
+            )
     );
 
     public Inventory getInventory() {
         return inventory;
+    }
+
+    public void updateInventory(Inventory inventory) {
+        this.inventory = inventory;
     }
 }
