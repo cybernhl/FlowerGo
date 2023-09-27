@@ -14,7 +14,6 @@ public class InventoryService {
     List<Seed> seed = new ArrayList<>(
     );
     private final Inventory inventory = new Inventory(
-            flower,
             seed,
             fertilizer
     );
