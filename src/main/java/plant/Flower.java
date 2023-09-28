@@ -8,5 +8,6 @@ public record Flower(
         GrowthLevel growthLevel,
         WaterLevel waterLevel,
         SunshineLevel sunshineLevel,
-        Instant lastFertilized
+        Instant lastFertilized,
+        FertilizerType fertilizerType
 ) { }
