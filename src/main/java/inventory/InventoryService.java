@@ -8,7 +8,7 @@ public class InventoryService {
 
     private Inventory inventory = new Inventory(
             List.of(
-                    new Seed(FlowerType.ASTER)
+                    new Seed(FlowerType.ASTER, Color.YELLOW)
             ),
             List.of(
                     new Fertilizer(FertilizerType.ORGANIC)

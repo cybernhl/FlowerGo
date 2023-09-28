@@ -1,5 +1,7 @@
 package user;
 
+import inventory.Inventory;
+import plant.Fertilizer;
 import plant.Seed;
 
 import java.util.ArrayList;
@@ -17,7 +19,7 @@ public class UserService {
     // Create a new user and add them to the user database
     public void createUser(String username) {
         if (!users.containsKey(username)) {
-            User newUser = new User(username, new ArrayList<>());
+            User newUser = new User(username, new Inventory(new ArrayList<>(), new ArrayList<>() ));
             users.put(username, newUser);
         }
     }

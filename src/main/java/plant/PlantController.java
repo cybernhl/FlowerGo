@@ -17,7 +17,7 @@ public class PlantController {
         plantService.plantFlowers(
                 new Flower(
                         seed.flowerType(),
-                        Color.YELLOW,
+                        seed.color(),
                         GrowthLevel.SEED,
                         WaterLevel.DRY,
                         SunshineLevel.NONE,

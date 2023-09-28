@@ -1,5 +1,8 @@
 package plant;
 
 public record Seed(
-        FlowerType flowerType
-) { }
+        FlowerType flowerType,
+        Color color
+) {
+
+}

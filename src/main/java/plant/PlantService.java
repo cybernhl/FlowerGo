@@ -12,7 +12,8 @@ public class PlantService {
                     GrowthLevel.BUD,
                     WaterLevel.SLIGHTLY_MOIST,
                     SunshineLevel.NONE,
-                    Instant.now()
+                    Instant.now(),
+                    FertilizerType.ORGANIC
             ))
     );
 
