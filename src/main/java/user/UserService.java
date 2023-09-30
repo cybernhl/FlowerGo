@@ -1,6 +1,7 @@
 package user;
 
 import inventory.Inventory;
+import location.Location;
 import plant.Fertilizer;
 import plant.Seed;
 
@@ -43,6 +44,14 @@ public class UserService {
         if (user != null){
             var updatedUser = user.removeSeeds(seedsToRemove);
             users.put(username, updatedUser);
+        }
+    }
+
+    public void plantSeed(String userName, Seed seed, Location location){
+        User user = users.get(userName);
+        if (user !=null){
+            var updatedUser = user.plantSeeds(seed);
+            users.put(userName, updatedUser);
         }
     }
 }

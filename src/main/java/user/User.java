@@ -21,4 +21,10 @@ public record User(String username, Inventory inventory) {
     }
     // Constructors, getters, and other methods can be added as needed
     // int level, int experience <<skip these two for now
+
+    public User plantSeeds(Seed seedsToPlant){
+        List<Seed> currentSeeds = new ArrayList<>(inventory.seedList());
+        currentSeeds.remove(0);
+        return new User(username, new Inventory(currentSeeds, inventory.fertilizerList()));
+    }
 }
