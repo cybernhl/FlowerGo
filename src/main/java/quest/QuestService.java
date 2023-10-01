@@ -21,7 +21,7 @@ public class QuestService {
                     "/imgs/watering-flowers.jpg"
             )
     );
-    List<Quest> getAll() {
+    List<Quest> getAvailableQuests() {
         return quests;
     }
 }

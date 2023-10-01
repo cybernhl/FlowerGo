@@ -23,7 +23,7 @@ public class HelloWorld {
             get("/plant", new VueComponent("plant-page"));
             get("/garden", new VueComponent("garden-page"));
             path("/api", () -> {
-                get("/quests", questController::getAllQuests);
+                get("/quests", questController::getAvailableQuests);
                 post("/plant", plantController::plantFlowers);
                 get("/flowers", plantController::getGarden);
             });
