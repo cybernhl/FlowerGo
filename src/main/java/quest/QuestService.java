@@ -24,4 +24,6 @@ public class QuestService {
     List<Quest> getAvailableQuests() {
         return quests;
     }
+
+    List<Quest> getActiveQuests(){return quests;}
 }

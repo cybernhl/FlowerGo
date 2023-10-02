@@ -15,4 +15,9 @@ public class QuestController {
         Thread.sleep(1000);
         ctx.json(quests);
     }
+    public void getActiveQuests(Context ctx) throws InterruptedException{
+        List<Quest> quests = questService.getActiveQuests();
+        Thread.sleep(1000);
+        ctx.json(quests);
+    }
 }
