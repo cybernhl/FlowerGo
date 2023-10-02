@@ -21,9 +21,17 @@ public class QuestService {
                     "/imgs/watering-flowers.jpg"
             )
     );
+
+    List<Quest> completedQuests = List.of(
+            new Quest("Plant a seed",
+                    "plant your first seed",
+                    "/imgs/seed-planting.jpeg")
+    );
     List<Quest> getAvailableQuests() {
         return quests;
     }
 
     List<Quest> getActiveQuests(){return quests;}
+
+    List<Quest> getCompleteQuests(){return completedQuests;}
 }

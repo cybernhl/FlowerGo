@@ -11,13 +11,18 @@ public class QuestController {
     }
 
     public void getAvailableQuests(Context ctx) throws InterruptedException {
-        List<Quest> quests = questService.getAvailableQuests();
+        List<Quest> AvailableQuests = questService.getAvailableQuests();
         Thread.sleep(1000);
-        ctx.json(quests);
+        ctx.json(AvailableQuests);
     }
     public void getActiveQuests(Context ctx) throws InterruptedException{
-        List<Quest> quests = questService.getActiveQuests();
+        List<Quest> ActiveQuests = questService.getActiveQuests();
         Thread.sleep(1000);
-        ctx.json(quests);
+        ctx.json(ActiveQuests);
+    }
+    public void getCompletedQuests(Context ctx) throws InterruptedException{
+        List<Quest> completedQuests = questService.getCompleteQuests();
+        Thread.sleep(1000);
+        ctx.json(completedQuests);
     }
 }
