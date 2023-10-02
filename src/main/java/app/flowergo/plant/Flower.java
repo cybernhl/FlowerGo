@@ -1,4 +1,4 @@
-package plant;
+package app.flowergo.plant;
 
 import java.time.Instant;
 
@@ -10,4 +10,5 @@ public record Flower(
         SunshineLevel sunshineLevel,
         Instant lastFertilized,
         FertilizerType fertilizerType
-) { }
+) {
+}

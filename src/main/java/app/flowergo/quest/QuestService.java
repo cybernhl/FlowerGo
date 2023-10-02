@@ -1,6 +1,5 @@
-package quest;
+package app.flowergo.quest;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class QuestService {
@@ -16,7 +15,7 @@ public class QuestService {
                     "/imgs/wild-dandelion.jpg"
             ),
             new Quest(
-                    "Water your plant 3 times",
+                    "Water your app.flowergo.plant 3 times",
                     "Description for card 2",
                     "/imgs/watering-flowers.jpg"
             )
@@ -24,14 +23,19 @@ public class QuestService {
 
     List<Quest> completedQuests = List.of(
             new Quest("Plant a seed",
-                    "plant your first seed",
+                    "app.flowergo.plant your first seed",
                     "/imgs/seed-planting.jpeg")
     );
+
     List<Quest> getAvailableQuests() {
         return quests;
     }
 
-    List<Quest> getActiveQuests(){return quests;}
+    List<Quest> getActiveQuests() {
+        return quests;
+    }
 
-    List<Quest> getCompleteQuests(){return completedQuests;}
+    List<Quest> getCompleteQuests() {
+        return completedQuests;
+    }
 }

@@ -1,4 +1,4 @@
-package plant;
+package app.flowergo.plant;
 
 public enum WaterLevel {
     DRY(1), // Represents dry soil

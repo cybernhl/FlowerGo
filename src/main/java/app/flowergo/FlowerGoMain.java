@@ -1,16 +1,16 @@
-package org.example;
+package app.flowergo;
 
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
 import io.javalin.vue.VueComponent;
-import plant.PlantController;
-import plant.PlantService;
-import quest.QuestController;
-import quest.QuestService;
+import app.flowergo.plant.PlantController;
+import app.flowergo.plant.PlantService;
+import app.flowergo.quest.QuestController;
+import app.flowergo.quest.QuestService;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
-public class HelloWorld {
+public class FlowerGoMain {
     public static void main(String[] args) {
         var questController = new QuestController(new QuestService());
         var plantController = new PlantController(new PlantService());

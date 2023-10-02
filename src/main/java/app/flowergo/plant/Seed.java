@@ -1,4 +1,4 @@
-package plant;
+package app.flowergo.plant;
 
 public record Seed(
         FlowerType flowerType,
