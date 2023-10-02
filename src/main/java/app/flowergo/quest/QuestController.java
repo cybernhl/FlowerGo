@@ -1,4 +1,4 @@
-package quest;
+package app.flowergo.quest;
 
 import java.util.List;
 import io.javalin.http.Context;

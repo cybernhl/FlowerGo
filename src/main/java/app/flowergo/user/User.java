@@ -1,7 +1,7 @@
-package user;
+package app.flowergo.user;
 
-import inventory.Inventory;
-import plant.Seed;
+import app.flowergo.inventory.Inventory;
+import app.flowergo.plant.Seed;
 
 import java.util.ArrayList;
 import java.util.List;

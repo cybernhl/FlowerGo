@@ -1,6 +1,6 @@
-package inventory;
+package app.flowergo.inventory;
 
-import plant.*;
+import app.flowergo.plant.*;
 
 import java.util.List;
 

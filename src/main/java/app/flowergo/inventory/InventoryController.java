@@ -1,4 +1,4 @@
-package inventory;
+package app.flowergo.inventory;
 
 import io.javalin.http.Context;
 

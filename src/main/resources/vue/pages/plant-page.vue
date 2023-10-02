@@ -6,7 +6,7 @@
   </app-frame>
 </template>
 <script>
-Vue.component("plant-page", {
-  template: "#plant-page",
+Vue.component("app.flowergo.plant-page", {
+  template: "#app.flowergo.plant-page",
 });
 </script>

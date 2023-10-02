@@ -1,9 +1,6 @@
-package plant;
+package app.flowergo.plant;
 
 import io.javalin.http.Context;
-
-import java.time.Instant;
-import java.util.List;
 
 public class PlantController {
     private final PlantService plantService;

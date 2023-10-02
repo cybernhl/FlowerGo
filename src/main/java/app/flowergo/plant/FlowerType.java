@@ -1,4 +1,4 @@
-package plant;
+package app.flowergo.plant;
 
 public enum FlowerType {
     ROSE(1),

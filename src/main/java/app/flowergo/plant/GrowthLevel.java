@@ -1,4 +1,4 @@
-package plant;
+package app.flowergo.plant;
 
 public enum GrowthLevel {
     SEED(1), // Represents the initial seed stage
@@ -18,5 +18,3 @@ public enum GrowthLevel {
         return level;
     }
 }
-
-

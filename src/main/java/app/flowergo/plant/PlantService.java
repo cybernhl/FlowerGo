@@ -1,4 +1,4 @@
-package plant;
+package app.flowergo.plant;
 
 import java.time.Instant;
 import java.util.ArrayList;

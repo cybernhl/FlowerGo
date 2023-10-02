@@ -1,9 +1,8 @@
-package user;
+package app.flowergo.user;
 
-import inventory.Inventory;
-import location.Location;
-import plant.Fertilizer;
-import plant.Seed;
+import app.flowergo.inventory.Inventory;
+import app.flowergo.location.Location;
+import app.flowergo.plant.Seed;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,13 +10,13 @@ import java.util.List;
 import java.util.Map;
 
 public class UserService {
-    private final Map<String, User> users; // Store user data by username
+    private final Map<String, User> users; // Store app.flowergo.user data by username
 
     public UserService() {
         this.users = new HashMap<>();
     }
 
-    // Create a new user and add them to the user database
+    // Create a new app.flowergo.user and add them to the app.flowergo.user database
     public void createUser(String username) {
         if (!users.containsKey(username)) {
             User newUser = new User(username, new Inventory(new ArrayList<>(), new ArrayList<>() ));
@@ -25,12 +24,12 @@ public class UserService {
         }
     }
 
-    // Retrieve user information by username
+    // Retrieve app.flowergo.user information by username
     public User getUser(String username) {
         return users.get(username);
     }
 
-    // Add seeds to a user's inventory
+    // Add seeds to a app.flowergo.user's app.flowergo.inventory
     public void addSeedsToUser(String username, List<Seed> seedsToAdd) {
         User user = users.get(username);
         if (user != null) {

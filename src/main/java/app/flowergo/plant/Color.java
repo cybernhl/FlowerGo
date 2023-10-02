@@ -1,4 +1,4 @@
-package plant;
+package app.flowergo.plant;
 
 public enum Color {
     RED(1),
@@ -25,5 +25,3 @@ public enum Color {
         return code;
     }
 }
-
-

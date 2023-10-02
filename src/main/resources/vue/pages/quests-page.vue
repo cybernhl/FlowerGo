@@ -6,7 +6,7 @@
       indeterminate
       color="primary"
     ></v-progress-circular>
-    <template v-for="quest in quests.data">
+    <template v-for="app.flowergo.quest in quests.data">
       <quest-card :quest="quest"></quest-card>
     </template>
   </app-frame>

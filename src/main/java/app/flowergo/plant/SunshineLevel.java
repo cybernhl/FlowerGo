@@ -1,4 +1,4 @@
-package plant;
+package app.flowergo.plant;
 
 public enum SunshineLevel {
     NONE(0), // Represents no sunshine
@@ -17,4 +17,3 @@ public enum SunshineLevel {
         return level;
     }
 }
-

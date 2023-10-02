@@ -1,7 +1,7 @@
 <template id="quest-card">
   <div class="center-container">
     <v-card width="300px">
-      <v-img :src="quest.imageUrl" alt="Image" height="100px"></v-img>
+      <v-img :src="app.flowergo.quest.imageUrl" alt="Image" height="100px"></v-img>
       <v-card-title class="py-1">{{ quest.title }}</v-card-title>
       <v-card-actions>
         <v-spacer></v-spacer>
@@ -29,11 +29,11 @@
 }
 </style>
 <script>
-Vue.component("quest-card", {
+Vue.component("app.flowergo.quest-card", {
   props: ["quest"],
   data: () => ({
     show: false,
   }),
-  template: "#quest-card",
+  template: "#app.flowergo.quest-card",
 });
 </script>
