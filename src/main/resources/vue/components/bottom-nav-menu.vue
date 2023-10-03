@@ -17,12 +17,12 @@ Vue.component("bottom-nav-menu", {
 </script>
 <style>
 .bottom-nav {
-  background: #fff;
+  background: #4dc55a !important;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-.bottom-nav {
-  bottom: calc(env(safe-area-inset-bottom)) !important;
+.bottom-nav * {
+  color: rgba(0, 0, 0, 0.7) !important;
 }
 
 .bottom-nav .v-btn {
@@ -45,6 +45,6 @@ Vue.component("bottom-nav-menu", {
 }
 
 .bottom-nav .v-btn--active i::before {
-  background: rgba(0, 76, 255, 0.07);
+  background: rgba(0, 0, 0, 0.1);
 }
 </style>

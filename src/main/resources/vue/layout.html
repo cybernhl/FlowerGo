@@ -1,25 +1,38 @@
 <html lang="en">
-<head>
+  <head>
     <title>FlowerGo</title>
-    <meta charset="utf8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, app.flowergo.user-scalable=no, viewport-fit=cover">
-    <link href="@cdnWebjar/mdi__font/7.2.96/css/materialdesignicons.css" rel="stylesheet">
-    <link href="@cdnWebjar/vuetify/2.7.0/dist/vuetify.css" rel="stylesheet">
-    <link href="/favicon.png" rel="icon">
+    <meta charset="utf8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="@cdnWebjar/mdi__font/7.2.96/css/materialdesignicons.css"
+      rel="stylesheet"
+    />
+    <link href="@cdnWebjar/vuetify/2.7.0/dist/vuetify.css" rel="stylesheet" />
+    <link href="/favicon.png" rel="icon" />
     <script src="@cdnWebjar/axios/1.4.0/dist/axios.min.js"></script>
     <script src="@cdnWebjar/vue/2.7.14/dist/vue.js"></script>
     <script src="@cdnWebjar/vuetify/2.7.0/dist/vuetify.js"></script>
+    <style>
+      @inlinefile ("/vue/inline/styles.css");
+    </style>
     @componentRegistration
-</head>
-<body>
-<main id="main-vue" v-cloak>
-    @routeComponent
-</main>
-<script>
-    const vue = new Vue({
+  </head>
+  <body>
+    <main id="main-vue" v-cloak>@routeComponent</main>
+    <script>
+      const vue = new Vue({
         el: "#main-vue",
         vuetify: new Vuetify(),
-    });
-</script>
-</body>
+      });
+    </script>
+  </body>
 </html>
