@@ -1,0 +1,32 @@
+/* / Make it work on desktop / */
+h1,
+h2,
+h3 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+}
+
+.layout-wrapper {
+  max-width: 600px;
+}
+
+.v-main {
+  background: #e6f5e8;
+}
+
+.v-btn {
+  border-radius: 8px;
+  box-shadow: 0 3px 0 0 #dddddd;
+}
+
+.v-btn.primary {
+  box-shadow: 0 3px 0 0 #135da6;
+}
+
+.v-sheet.v-card:not(.v-sheet--outlined) {
+  box-shadow: 0 3px 0 1px #dddddd;
+}
+
+.v-sheet + .v-sheet {
+  margin-top: 24px !important;
+}
