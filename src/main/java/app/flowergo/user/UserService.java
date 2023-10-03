@@ -19,7 +19,7 @@ public class UserService {
     // Create a new app.flowergo.user and add them to the app.flowergo.user database
     public void createUser(String username) {
         if (!users.containsKey(username)) {
-            User newUser = new User(username, new Inventory(new ArrayList<>(), new ArrayList<>() ));
+            User newUser = new User(username, new Inventory(new ArrayList<>(), new ArrayList<>()));
             users.put(username, newUser);
         }
     }
@@ -38,17 +38,17 @@ public class UserService {
         }
     }
 
-    public void removeSeeds(String username, List<Seed> seedsToRemove){
+    public void removeSeeds(String username, List<Seed> seedsToRemove) {
         User user = users.get(username);
-        if (user != null){
+        if (user != null) {
             var updatedUser = user.removeSeeds(seedsToRemove);
             users.put(username, updatedUser);
         }
     }
 
-    public void plantSeed(String userName, Seed seed, Location location){
+    public void plantSeed(String userName, Seed seed, Location location) {
         User user = users.get(userName);
-        if (user !=null){
+        if (user != null) {
             var updatedUser = user.plantSeeds(seed);
             users.put(userName, updatedUser);
         }

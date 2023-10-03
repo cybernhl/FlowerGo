@@ -26,11 +26,16 @@ public class QuestService {
                     "app.flowergo.plant your first seed",
                     "/imgs/seed-planting.jpeg")
     );
+
     List<Quest> getAvailableQuests() {
         return quests;
     }
 
-    List<Quest> getActiveQuests(){return quests;}
+    List<Quest> getActiveQuests() {
+        return quests;
+    }
 
-    List<Quest> getCompleteQuests(){return completedQuests;}
+    List<Quest> getCompleteQuests() {
+        return completedQuests;
+    }
 }

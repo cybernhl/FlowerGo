@@ -10,4 +10,5 @@ public record Flower(
         SunshineLevel sunshineLevel,
         Instant lastFertilized,
         FertilizerType fertilizerType
-) { }
+) {
+}
