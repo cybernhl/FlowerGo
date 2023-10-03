@@ -15,7 +15,7 @@ public class QuestService {
                     "/imgs/wild-dandelion.jpg"
             ),
             new Quest(
-                    "Water your app.flowergo.plant 3 times",
+                    "Water your plant 3 times",
                     "Description for card 2",
                     "/imgs/watering-flowers.jpg"
             )
@@ -23,7 +23,7 @@ public class QuestService {
 
     List<Quest> completedQuests = List.of(
             new Quest("Plant a seed",
-                    "app.flowergo.plant your first seed",
+                    "plant your first seed",
                     "/imgs/seed-planting.jpeg")
     );
 

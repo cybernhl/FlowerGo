@@ -20,7 +20,7 @@ public class FlowerGoMain {
         }).routes(() -> {
             get("/", ctx -> ctx.result("Flower Go"));
             get("/quests", new VueComponent("quests-page"));
-            get("/plant", new VueComponent("app.flowergo.plant-page"));
+            get("/plant", new VueComponent("plant-page"));
             get("/garden", new VueComponent("garden-page"));
             path("/api", () -> {
                 get("/quests", questController::getAvailableQuests);
