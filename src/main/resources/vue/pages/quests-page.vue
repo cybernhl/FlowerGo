@@ -1,11 +1,7 @@
 <template id="quests-page">
   <app-frame>
     <page-heading>Quests</page-heading>
-    <v-progress-circular
-      v-if="quests.loading"
-      indeterminate
-      color="primary"
-    ></v-progress-circular>
+    <flower-loader v-if="quests.loading"></flower-loader>
     <template v-for="quest in quests.data">
       <quest-card :quest="quest"></quest-card>
     </template>
