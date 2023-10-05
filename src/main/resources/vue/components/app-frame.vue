@@ -8,7 +8,7 @@
         <bottom-nav-element icon="mdi-list-box-outline" path="/quests"
           >Quests</bottom-nav-element
         >
-        <bottom-nav-element icon="mdi-shovel" path="/app.flowergo.plant"
+        <bottom-nav-element icon="mdi-shovel" path="/plant"
           >Plant</bottom-nav-element
         >
         <bottom-nav-element icon="mdi-flower-outline" path="/garden"
