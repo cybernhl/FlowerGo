@@ -1,7 +1,9 @@
 <template id="flower-loader">
-  <div class="flower">
-    <div class="petals"></div>
-    <div class="pistil"></div>
+  <div class="flower-wrapper">
+    <div class="flower">
+      <div class="petals"></div>
+      <div class="pistil"></div>
+    </div>
   </div>
 </template>
 <script>
@@ -10,6 +12,19 @@ Vue.component("flower-loader", {
 });
 </script>
 <style>
+.flower-wrapper {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .flower {
   position: relative;
   height: 120px;
@@ -22,7 +37,7 @@ Vue.component("flower-loader", {
 .petals::before {
   content: "";
   position: absolute;
-  background: #517bd6;
+  background: #ffb5d8;
   border-radius: 20px;
   width: 120px;
   height: 40px;
@@ -51,9 +66,9 @@ Vue.component("flower-loader", {
   top: 40px;
   width: 40px;
   border-radius: 20px;
-  background: #ffee00;
+  background: #fffbab;
   z-index: 1;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4) inset, 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) inset, 0 0 3px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes rotate {
