@@ -29,11 +29,11 @@ Vue.component("quest-card", {
 </script>
 <style>
 .quest-card .v-card__actions {
-  background: #4dc55a;
+  background: #d9f067;
 }
 
 .quest-card {
-  box-shadow: 0 3px 0 0 #21812b !important;
+  box-shadow: 0 3px 0 0 #233713 !important;
 }
 
 .quest-card h2 {

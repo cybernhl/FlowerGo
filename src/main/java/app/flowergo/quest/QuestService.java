@@ -7,7 +7,7 @@ public class QuestService {
             new Quest(
                     "Water a yellow flower",
                     "find a yellow flower and water it",
-                    "/imgs/water-yellow-flower.png"
+                    "/imgs/water-yellow-flower.jpeg"
             ),
             new Quest(
                     "Collect 5 Dandelion seeds",
