@@ -12,12 +12,12 @@ public class QuestService {
             new Quest(
                     "Collect 5 Dandelion seeds",
                     "Description for card 1",
-                    "/imgs/wild-dandelion.jpg"
+                    "/imgs/wild-dandelion.jpeg"
             ),
             new Quest(
                     "Water your plant 3 times",
                     "Description for card 2",
-                    "/imgs/watering-flowers.jpg"
+                    "/imgs/watering-flowers.jpeg"
             )
     );
 
