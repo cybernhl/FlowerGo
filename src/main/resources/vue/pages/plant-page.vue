@@ -9,7 +9,7 @@
 <script>
 Vue.component("plant-page", {
   data: () => ({
-    planting: new LoadableData("/plant", false),
+    planting: new LoadableData("/api/plant", false),
   }),
   template: "#plant-page",
 });
