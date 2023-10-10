@@ -23,7 +23,8 @@ public class PlantController {
                 ));
     }
 
-    public void getGarden(Context ctx) {
+    public void getGarden(Context ctx) throws InterruptedException {
+        Thread.sleep(1000);
         ctx.json(plantService.getGarden());
         //send the flower from the server to the client in jsonString
     }
