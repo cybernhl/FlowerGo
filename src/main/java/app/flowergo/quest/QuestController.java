@@ -28,4 +28,9 @@ public class QuestController {
         Thread.sleep(1000);
         ctx.json(completedQuests);
     }
+
+    public void getQuestProgress(Context ctx) throws InterruptedException{
+        Quest questInProgress = questService.getQuestProgress();
+        ctx.json(questInProgress);
+    }
 }
