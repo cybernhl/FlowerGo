@@ -32,5 +32,6 @@ public class QuestController {
     }
     public void updateQuestProgress(Context ctx) throws InterruptedException{
         //add more tomorrow
+        //
     }
 }
