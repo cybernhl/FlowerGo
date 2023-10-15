@@ -31,7 +31,9 @@ public class QuestController {
         ctx.json(questInProgress);
     }
     public void updateQuestProgress(Context ctx) throws InterruptedException{
-        //add more tomorrow
+        Quest quest = ctx.bodyAsClass(Quest.class);
+        Quest updateQuestProgress = questService.updateQuestProgress(quest);
+        ctx.json(updateQuestProgress);
         //
     }
 }

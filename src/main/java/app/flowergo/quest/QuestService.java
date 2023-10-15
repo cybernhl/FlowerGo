@@ -51,4 +51,9 @@ public class QuestService {
     }
 
     Quest getQuestProgress(){return questInProgress;}
+
+    public Quest updateQuestProgress(Quest quest){this.questInProgress = quest;
+        return quest;
+    }
+
 }
