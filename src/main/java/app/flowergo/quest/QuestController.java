@@ -35,5 +35,6 @@ public class QuestController {
         Quest updateQuestProgress = questService.updateQuestProgress(quest);
         ctx.json(updateQuestProgress);
         //
+        //
     }
 }
