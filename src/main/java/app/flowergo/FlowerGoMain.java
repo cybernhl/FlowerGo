@@ -1,5 +1,7 @@
 package app.flowergo;
 
+import app.flowergo.inventory.InventoryController;
+import app.flowergo.inventory.InventoryService;
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
 import io.javalin.vue.VueComponent;
@@ -14,6 +16,7 @@ public class FlowerGoMain {
     public static void main(String[] args) {
         var questController = new QuestController(new QuestService());
         var plantController = new PlantController(new PlantService());
+        var inventoryController = new InventoryController(new InventoryService());
         var app = Javalin.create(javalinConfig -> {
             javalinConfig.staticFiles.add("src/main/resources/public", Location.EXTERNAL);
             javalinConfig.staticFiles.enableWebjars();
@@ -26,6 +29,7 @@ public class FlowerGoMain {
                 get("/quests", questController::getAvailableQuests);
                 post("/plant", plantController::plantFlowers);
                 get("/flowers", plantController::getGarden);
+                get("/inventory", inventoryController::getInventory);
             });
         }).start(7070);
     }

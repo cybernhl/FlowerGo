@@ -17,5 +17,5 @@ public class InventoryController {
         Inventory inventory = ctx.bodyAsClass(Inventory.class);
         inventoryService.updateInventory(inventory);
     }
-    ////add some space
+
 }
