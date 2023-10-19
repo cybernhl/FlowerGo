@@ -1,10 +1,19 @@
 <template id="plant-page">
   <app-frame>
     <page-heading>Plant</page-heading>
-    <flower-loader v-if="inventory.loading"></flower-loader>
-
-    {{ inventory.data }}
-    <v-btn color="primary">Plant</v-btn>
+    <flower-loader v-if="inventory.loading === true"></flower-loader>
+    <template v-if="inventory.loaded === true">
+      <div
+        v-for="seed in inventory.data.seedList"
+        class="d-flex justify-space-between align-center mt-3"
+      >
+        <div>
+          {{ seed.color }}
+          {{ seed.flowerType }}
+        </div>
+        <v-btn color="primary">Plant</v-btn>
+      </div>
+    </template>
   </app-frame>
 </template>
 <script>
