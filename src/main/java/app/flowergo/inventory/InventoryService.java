@@ -21,6 +21,17 @@ public class InventoryService {
         return inventory;
     }
 
+    public Seed getSeedFromInventory(FlowerType type, Color color){
+        for (int i = 0; i < inventory.seedList().size(); i++){
+            Seed seed = inventory.seedList().get(i);
+            if (seed.color() == color && seed.flowerType() == type){
+                Seed removeSeed = inventory.seedList().remove(i);
+                return removeSeed;
+            }
+        }
+        return null;
+    }
+
     public void updateInventory(Inventory inventory) {
         this.inventory = inventory;
     }
