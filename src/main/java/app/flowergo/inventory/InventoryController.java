@@ -22,10 +22,5 @@ public class InventoryController {
         inventoryService.updateInventory(inventory);
     }
 
-    public Seed getSeedFromInventory() {
-        FlowerType flowerType = getSeedFromInventory().flowerType();
-        Color color = getSeedFromInventory().color();
-        Seed getSeed = inventoryService.getSeedFromInventory(flowerType, color);
-        return getSeed;
-    }
+
 }

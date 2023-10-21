@@ -1,9 +1,12 @@
 package app.flowergo.plant;
 
+import app.flowergo.inventory.Inventory;
+import app.flowergo.inventory.InventoryService;
 import io.javalin.http.Context;
 
 public class PlantController {
     private final PlantService plantService;
+    public InventoryService inventoryService;
 
     public PlantController(PlantService plantService) {
         this.plantService = plantService;
@@ -28,5 +31,11 @@ public class PlantController {
         Thread.sleep(1000);
         ctx.json(plantService.getGarden());
         //send the flower from the server to the client in jsonString
+    }
+    public Seed getSeedFromInventory() {
+        FlowerType flowerType = getSeedFromInventory().flowerType();
+        Color color = getSeedFromInventory().color();
+        Seed getSeed = inventoryService.getSeedFromInventory(flowerType, color);
+        return getSeed;
     }
 }
