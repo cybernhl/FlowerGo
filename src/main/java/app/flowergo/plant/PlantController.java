@@ -25,6 +25,7 @@ public class PlantController {
                         FertilizerType.ORGANIC
                 )
         );
+        System.out.println(plantService.getGarden());
     }
 
     public void getGarden(Context ctx) throws InterruptedException {
@@ -32,10 +33,5 @@ public class PlantController {
         ctx.json(plantService.getGarden());
         //send the flower from the server to the client in jsonString
     }
-    public Seed getSeedFromInventory() {
-        FlowerType flowerType = getSeedFromInventory().flowerType();
-        Color color = getSeedFromInventory().color();
-        Seed getSeed = inventoryService.getSeedFromInventory(flowerType, color);
-        return getSeed;
-    }
+
 }

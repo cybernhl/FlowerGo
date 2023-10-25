@@ -11,7 +11,7 @@
           {{ seed.color }}
           {{ seed.flowerType }}
         </div>
-        <v-btn color="primary">Plant</v-btn>
+        <v-btn color="primary" @click="plantFlower(seed)">Plant</v-btn>
       </div>
     </template>
   </app-frame>
@@ -21,6 +21,11 @@ Vue.component("plant-page", {
   data: () => ({
     inventory: new LoadableData("/api/inventory", false),
   }),
+  methods: {
+    plantFlower(seed) {
+      axios.post("/api/plant", seed);
+    },
+  },
   template: "#plant-page",
 });
 </script>
