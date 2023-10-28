@@ -1,23 +1,28 @@
 package app.flowergo.plant;
 
-import app.flowergo.inventory.Inventory;
 import app.flowergo.inventory.InventoryService;
+import io.javalin.http.BadRequestResponse;
 import io.javalin.http.Context;
 
 public class PlantController {
     private final PlantService plantService;
-    public InventoryService inventoryService;
+    private final InventoryService inventoryService;
 
-    public PlantController(PlantService plantService) {
+    public PlantController(PlantService plantService, InventoryService inventoryService) {
         this.plantService = plantService;
+        this.inventoryService = inventoryService;
     }
 
     public void plantFlowers(Context ctx) {
-        Seed seed = ctx.bodyAsClass(Seed.class);
+        Seed requestSeed = ctx.bodyAsClass(Seed.class);
+        Seed inventorySeed = inventoryService.removeSeedFromInventory(requestSeed.flowerType(), requestSeed.color());
+        if (inventorySeed == null) {
+            throw new BadRequestResponse("You don't have this seed");
+        }
         plantService.plantFlowers(
                 new Flower(
-                        seed.flowerType(),
-                        seed.color(),
+                        inventorySeed.flowerType(),
+                        inventorySeed.color(),
                         GrowthLevel.SEED,
                         WaterLevel.DRY,
                         SunshineLevel.NONE,
@@ -25,7 +30,6 @@ public class PlantController {
                         FertilizerType.ORGANIC
                 )
         );
-        System.out.println(plantService.getGarden());
     }
 
     public void getGarden(Context ctx) throws InterruptedException {

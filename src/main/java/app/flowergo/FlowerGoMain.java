@@ -14,9 +14,10 @@ import static io.javalin.apibuilder.ApiBuilder.*;
 
 public class FlowerGoMain {
     public static void main(String[] args) {
+        var inventoryService = new InventoryService();
         var questController = new QuestController(new QuestService());
-        var plantController = new PlantController(new PlantService());
-        var inventoryController = new InventoryController(new InventoryService());
+        var plantController = new PlantController(new PlantService(), inventoryService);
+        var inventoryController = new InventoryController(inventoryService);
         var app = Javalin.create(javalinConfig -> {
             javalinConfig.staticFiles.add("src/main/resources/public", Location.EXTERNAL);
             javalinConfig.staticFiles.enableWebjars();
