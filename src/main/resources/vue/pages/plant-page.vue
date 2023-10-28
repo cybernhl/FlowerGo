@@ -20,10 +20,15 @@
 Vue.component("plant-page", {
   data: () => ({
     inventory: new LoadableData("/api/inventory", false),
+    planting: false,
   }),
   methods: {
     plantFlower(seed) {
-      axios.post("/api/plant", seed);
+      this.planting = true;
+      axios.post("/api/plant", seed)
+        .then(() => this.inventory.refresh(false))
+        .catch(err => console.log("Error", err))
+        .finally(() => this.planting = false);
     },
   },
   template: "#plant-page",

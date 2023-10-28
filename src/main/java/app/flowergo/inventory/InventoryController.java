@@ -1,8 +1,5 @@
 package app.flowergo.inventory;
 
-import app.flowergo.plant.Color;
-import app.flowergo.plant.FlowerType;
-import app.flowergo.plant.Seed;
 import io.javalin.http.Context;
 
 public class InventoryController {
