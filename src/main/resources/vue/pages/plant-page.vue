@@ -13,6 +13,15 @@
         </div>
         <v-btn color="primary" @click="plantFlower(seed)">Plant</v-btn>
       </div>
+      <v-alert
+        v-model="seedPlanted"
+        dismissible
+        color="warning"
+        icon="mdi-flower"
+      >
+        Your seed was planted!
+        You can see it in your <a href="/garden">garden</a>.
+      </v-alert>
     </template>
   </app-frame>
 </template>
@@ -21,12 +30,16 @@ Vue.component("plant-page", {
   data: () => ({
     inventory: new LoadableData("/api/inventory", false),
     planting: false,
+    seedPlanted: false,
   }),
   methods: {
     plantFlower(seed) {
       this.planting = true;
       axios.post("/api/plant", seed)
-        .then(() => this.inventory.refresh(false))
+        .then(() => {
+          this.inventory.refresh(false);
+          this.seedPlanted = true;
+        })
         .catch(err => console.log("Error", err))
         .finally(() => this.planting = false);
     },
@@ -34,3 +47,8 @@ Vue.component("plant-page", {
   template: "#plant-page",
 });
 </script>
+<style>
+  .v-alert a {
+    color: inherit !important;
+  }
+</style>
