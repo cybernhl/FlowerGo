@@ -3,6 +3,9 @@
     <page-heading>Plant</page-heading>
     <flower-loader v-if="inventory.loading === true"></flower-loader>
     <template v-if="inventory.loaded === true">
+      <div v-if="inventory.data.seedList.length === 0">
+        YOU DON'T HAVE ANY SEEDS! HAHAHA!
+      </div>
       <div
         v-for="seed in inventory.data.seedList"
         class="d-flex justify-space-between align-center mt-3"
