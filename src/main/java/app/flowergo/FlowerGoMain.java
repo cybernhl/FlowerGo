@@ -21,16 +21,17 @@ public class FlowerGoMain {
         var app = Javalin.create(javalinConfig -> {
             javalinConfig.staticFiles.add("src/main/resources/public", Location.EXTERNAL);
             javalinConfig.staticFiles.enableWebjars();
-        }).routes(() -> {
-            get("/", ctx -> ctx.result("Flower Go"));
-            get("/quests", new VueComponent("quests-page"));
-            get("/plant", new VueComponent("plant-page"));
-            get("/garden", new VueComponent("garden-page"));
-            path("/api", () -> {
-                get("/quests", questController::getAvailableQuests);
-                post("/plant", plantController::plantFlowers);
-                get("/flowers", plantController::getGarden);
-                get("/inventory", inventoryController::getInventory);
+            javalinConfig.router.apiBuilder(() -> {
+                get("/", ctx -> ctx.result("Flower Go"));
+                get("/quests", new VueComponent("quests-page"));
+                get("/plant", new VueComponent("plant-page"));
+                get("/garden", new VueComponent("garden-page"));
+                path("/api", () -> {
+                    get("/quests", questController::getAvailableQuests);
+                    post("/plant", plantController::plantFlowers);
+                    get("/flowers", plantController::getGarden);
+                    get("/inventory", inventoryController::getInventory);
+                });
             });
         }).start(7070);
     }

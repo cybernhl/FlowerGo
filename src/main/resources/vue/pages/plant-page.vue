@@ -14,7 +14,7 @@
           {{ seed.color }}
           {{ seed.flowerType }}
         </div>
-        <v-btn color="primary" @click="plantFlower(seed)">Plant</v-btn>
+        <v-btn color="primary" @click="plantFlower(seed)" :loading="inventory.refreshing">Plant</v-btn>
       </div>
       <v-alert
         v-model="seedPlanted"
@@ -37,6 +37,7 @@ Vue.component("plant-page", {
   }),
   methods: {
     plantFlower(seed) {
+      if (this.planting) return;
       this.planting = true;
       axios.post("/api/plant", seed)
         .then(() => {
