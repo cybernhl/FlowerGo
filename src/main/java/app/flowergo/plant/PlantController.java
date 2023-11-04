@@ -27,7 +27,7 @@ public class PlantController {
                         WaterLevel.DRY,
                         SunshineLevel.NONE,
                         null,
-                        FertilizerType.ORGANIC
+                        null
                 )
         );
     }

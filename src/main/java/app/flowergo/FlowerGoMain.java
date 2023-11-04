@@ -29,7 +29,7 @@ public class FlowerGoMain {
                 path("/api", () -> {
                     get("/quests", questController::getAvailableQuests);
                     post("/plant", plantController::plantFlowers);
-                    get("/flowers", plantController::getGarden);
+                    get("/garden", plantController::getGarden);
                     get("/inventory", inventoryController::getInventory);
                 });
             });

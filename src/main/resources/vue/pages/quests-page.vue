@@ -10,7 +10,7 @@
 <script>
 Vue.component("quests-page", {
   data: () => ({
-    quests: new LoadableData("/api/quests", false),
+    quests: new LoadableData("/api/quests"),
   }),
   template: "#quests-page",
 });
