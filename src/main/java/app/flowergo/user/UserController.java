@@ -10,6 +10,6 @@ public class UserController {
     }
 
     public void getUser(Context ctx) {
-        ctx.json(userService.getUser(ctx.pathParam("userID")));
+        ctx.json(userService.getUser(ctx.pathParam("userId")));
     }
 }

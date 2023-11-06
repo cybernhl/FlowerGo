@@ -10,10 +10,15 @@
       </v-alert>
     </div>
     <template v-if="garden.loaded === true">
-      <div v-if="garden.data.length === 0">
-        YOU DON'T HAVE ANY FLOWERS! HAHAHA!
+      <div v-if="!$javalin.state.needsTutorial && garden.data.length === 0">
+        <v-alert type="info">
+          You don't have any flowers yet! Click the button below to plant your first flower.
+        </v-alert>
+        <div class="text-center">
+          <v-btn color="primary" href="/plant">Plant a flower</v-btn>
+        </div>
       </div>
-      <v-card v-for="flower in garden.data" class="d-flex justify-space-between align-center mt-3">
+      <v-card v-for="(flower, i) in garden.data" class="d-flex justify-space-between align-center mt-3" :key="i">
         {{ flower }}
       </v-card>
     </template>
