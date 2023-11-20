@@ -18,9 +18,9 @@
           <v-btn color="primary" href="/plant">Plant a flower</v-btn>
         </div>
       </div>
-      <v-card v-for="(flower, i) in garden.data" class="d-flex justify-space-between align-center mt-3" :key="i">
-        {{ flower }}
-      </v-card>
+      <div v-for="(flower, i) in garden.data" :key="i">
+        <flower-card :flower="flower"></flower-card>
+      </div>
     </template>
   </app-frame>
 </template>
