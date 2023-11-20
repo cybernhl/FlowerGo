@@ -16,7 +16,7 @@ import static io.javalin.apibuilder.ApiBuilder.*;
 
 public class FlowerGoMain {
 
-    static boolean hasFinishedTutorial = false;
+    static boolean hasFinishedTutorial = true; // so we don`t have to read it all the time
 
     public static void main(String[] args) {
         var inventoryService = new InventoryService();
