@@ -1,5 +1,5 @@
 <template id="quest-card">
-  <v-card class="quest-card">
+  <v-card class="quest-card mt-5">
     <v-img :src="quest.imageUrl" alt="Image" height="100px"></v-img>
     <v-card-actions class="pa-3">
       <h2>{{ quest.title }}</h2>
