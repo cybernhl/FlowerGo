@@ -24,4 +24,5 @@ Vue.component("flower-card", {
   template: "#flower-card",
 });
 </script>
-<style></style>
+<style>
+</style>
