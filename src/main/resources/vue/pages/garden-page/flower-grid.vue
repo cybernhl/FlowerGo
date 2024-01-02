@@ -15,7 +15,8 @@
             </div>
         </div>
         <div class="flower-panel pa-3">
-            <h1>{{ selectedRow }}:{{ selectedCol }}</h1>
+            <h1 v-if="selectedRow !== null">{{ selectedRow }}:{{ selectedCol }}</h1>
+            <h1 v-if="selectedRow === null">Click a flower</h1>
         </div>
     </div>
 </template>

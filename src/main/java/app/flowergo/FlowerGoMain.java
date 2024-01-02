@@ -24,7 +24,9 @@ public class FlowerGoMain {
         var plantController = new PlantController(new PlantService(), inventoryService);
         var inventoryController = new InventoryController(inventoryService);
         var app = Javalin.create(javalinConfig -> {
-            javalinConfig.bundledPlugins.enableDevLogging();
+            javalinConfig.bundledPlugins.enableDevLogging(config -> {
+                config.skipStaticFiles = true;
+            });
             javalinConfig.vue.stateFunction = ctx -> Map.of(
                     //"username", ctx.sessionAttribute("username"),
                     "needsTutorial", !hasFinishedTutorial

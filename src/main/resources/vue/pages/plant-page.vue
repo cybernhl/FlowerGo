@@ -39,7 +39,12 @@ Vue.component("plant-page", {
     plantFlower(seed) {
       if (this.planting) return;
       this.planting = true;
-      axios.post("/api/plant", seed)
+      let data = {
+          row: Math.floor(Math.random() * 6) + 5,
+          col: Math.floor(Math.random() * 6),
+          seed: seed
+      };
+      axios.post("/api/plant", data)
           .then(() => {
             this.inventory.refresh(false);
             this.seedPlanted = true;

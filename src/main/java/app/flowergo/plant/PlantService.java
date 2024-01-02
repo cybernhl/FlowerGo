@@ -8,6 +8,8 @@ public class PlantService {
 
     private final List<Flower> garden = new ArrayList<>(List.of(
             new Flower(
+                    4,
+                    2,
                     FlowerType.ROSE,
                     Color.RED,
                     GrowthLevel.FULL_BLOOM,
