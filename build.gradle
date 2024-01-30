@@ -3,8 +3,17 @@
  */
 
 plugins {
-    id 'java-library'
-    id 'maven-publish'
+    id "java"
+    id 'application'
+//    id 'java-library'
+    id "maven-publish"
+//    id "org.jetbrains.kotlin.jvm"
+    alias(libs.plugins.kotlin.jvm)
+    //Ref  :
+    //java +  application
+    //java-library
+    //kotlin
+    //kotlin-library
 }
 
 repositories {
@@ -20,13 +29,18 @@ dependencies {
     api libs.org.webjars.npm.vuetify
     api 'org.webjars.npm:mdi__font:7.3.67'
     api libs.org.webjars.npm.axios
-    api libs.com.google.guava.guava
+    api libs.guava
 }
 
 group = 'org.example'
 version = '1.0-SNAPSHOT'
 description = 'FlowerGo'
 java.sourceCompatibility = JavaVersion.VERSION_17
+
+sourceSets {
+    main.kotlin.srcDirs += 'src/main/kotlin'
+    main.java.srcDirs += 'src/main/java'
+}
 
 publishing {
     publications {
