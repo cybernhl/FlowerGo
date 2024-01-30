@@ -46,6 +46,6 @@ public class FlowerGoMain {
                     patch("/tutorial-read", ctx -> hasFinishedTutorial = true);
                 });
             });
-        }).start(7070);//FIXME PORT　7070 can not use !! bind !!
+        }).start(8080);//FIXME PORT　7070 can not use !! bind !!
     }
 }
